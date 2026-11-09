@@ -59,3 +59,17 @@ class Employee {
     return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
   }
 }
+
+class Manager extends Employee {
+  constructor(
+    name: string,
+    baseSalary: number,
+    private department: string
+  ) {
+    super(name, baseSalary);
+  }
+
+  getRoleInfo(): string {
+    return `Manager of ${this.department}: ${this.name}`;
+  }
+}
