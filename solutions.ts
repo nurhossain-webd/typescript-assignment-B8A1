@@ -22,3 +22,12 @@ function formatCoordinate(
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.flat();
+}
+
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
