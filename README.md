@@ -21,6 +21,11 @@ Two blog posts are also included:
 
 2. type-narrowing.md - Explains type narrowing with practical examples using typeof, instanceof, and the in operator.
 
+Blog Posts
+
+1. [Type Aliases vs Interfaces in TypeScript](./type-vs-interface.md)
+2. [Understanding Type Narrowing in TypeScript](./type-narrowing.md)
+
 Technologies Used:
 
 TypeScript
