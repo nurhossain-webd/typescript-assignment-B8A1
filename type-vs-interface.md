@@ -22,10 +22,11 @@ const user: User = {
 
 Interfaces support inheritance using the extends keyword. This allows us to reuse existing properties.
 
-typescript
+```typescript
 interface Admin extends User {
-role: string;
+  role: string;
 }
+```
 
 Another feature of interfaces is declaration merging. If we declare the same interface multiple times, TypeScript automatically combines its properties.
 
@@ -33,22 +34,24 @@ Understanding Type Aliases
 
 A type alias can also define an object structure, but it is more flexible. We can use it for union types, tuples, primitive types, and intersections.
 
-typescript
+```typescript
 type Status = "active" | "inactive";
 
 type Coordinate = [number, number];
 
 type Product = {
-id: number;
-title: string;
+  id: number;
+  title: string;
 };
+```
 
 We can also combine types using the intersection operator.
 
-typescript
+```typescript
 type DigitalProduct = Product & {
-downloadUrl: string;
+  downloadUrl: string;
 };
+```
 
 Unlike interfaces, type aliases do not support declaration merging.
 

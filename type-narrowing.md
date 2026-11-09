@@ -8,14 +8,15 @@ Type Narrowing with typeof
 
 The typeof operator checks the type of a value at runtime. It is commonly used with strings, numbers, and booleans.
 
-typescript
+```typescript
 function formatValue(value: string | number): string {
-if (typeof value === "string") {
-return value.toUpperCase();
-}
+  if (typeof value === "string") {
+    return value.toUpperCase();
+  }
 
-return value.toFixed(2);
+  return value.toFixed(2);
 }
+```
 
 Here, TypeScript understands that value is a string inside the if block. Otherwise, it treats the value as a number. This helps prevent type-related errors.
 
@@ -23,14 +24,15 @@ Type Narrowing with instanceof
 
 The instanceof operator checks whether an object belongs to a particular class or constructor.
 
-typescript
+```typescript
 function handleError(error: Error | string): string {
-if (error instanceof Error) {
-return error.message;
-}
+  if (error instanceof Error) {
+    return error.message;
+  }
 
-return error;
+  return error;
 }
+```
 
 This is useful when handling errors because we can safely access the message property of an Error object.
 
@@ -38,22 +40,23 @@ Type Narrowing with the in Operator
 
 The in operator checks whether a specific property exists in an object.
 
-typescript
+```typescript
 interface Car {
-drive(): void;
+  drive(): void;
 }
 
 interface Boat {
-sail(): void;
+  sail(): void;
 }
 
 function startVehicle(vehicle: Car | Boat): void {
-if ("drive" in vehicle) {
-vehicle.drive();
-} else {
-vehicle.sail();
+  if ("drive" in vehicle) {
+    vehicle.drive();
+  } else {
+    vehicle.sail();
+  }
 }
-}
+```
 
 In this example, TypeScript checks whether the object has a drive method. Based on that condition, it allows us to call the appropriate method.
 
